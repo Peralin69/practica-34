@@ -13,10 +13,10 @@ input.onButtonPressed(Button.AB, function () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
     basic.pause(2000)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
     maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
-    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
 })
 let strip: neopixel.Strip = null
-strip = neopixel.create(DigitalPin.P15, 24, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P15, 4, NeoPixelMode.RGB)
